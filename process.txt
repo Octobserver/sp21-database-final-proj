@@ -6,4 +6,5 @@ For the Hopital Table:
 
 For the Spending Table: 
 1. Visit the website of Opportunity Insights, Economic Tracker of COVID19[https://www.tracktherecovery.org/]
-2. Download spending data set from [https://github.com/OpportunityInsights/EconomicTracker], more specifically from [https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md]
+2. Download spending data set from [https://github.com/OpportunityInsights/EconomicTracker], more specifically from [https://github.com/OpportunityInsights/EconomicTracker/tree/main/data]
+3. Breif description of what's inside each dataset file can be seen in [https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md]
