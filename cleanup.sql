@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS Hospital;
+DROP TABLE IF EXISTS SpendingByState;
