@@ -8,3 +8,6 @@ For the Spending Table:
 1. Visit the website of Opportunity Insights, Economic Tracker of COVID19[https://www.tracktherecovery.org/]
 2. Download spending data set from [https://github.com/OpportunityInsights/EconomicTracker], more specifically from [https://github.com/OpportunityInsights/EconomicTracker/tree/main/data]
 3. Breif description of what's inside each dataset file can be seen in [https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md]
+4. Rename colomn names according to description in https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md
+5. Remove empty data rows 
+6. Keep only colomns (month, day, statefips, spend_accomodation_food, spend_arts_entertainment, spend_all, spend_general_merchandise, spend_grocery_food_store, spend_healthcare_social_assistance, spend_transportation_warehousing, spend_all_inchigh, spend_all_inclow, spend_all_incmiddle)
