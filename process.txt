@@ -1,0 +1,1 @@
+1. Download the Hospital Bed Capacity and COVID-19 dataset[https://www.kaggle.com/mrmorj/hospital-bed-capacity-and-covid19] 
