@@ -2,3 +2,8 @@
 For the Hopital Table: 
 1. Download the COVID-19 Reported Patient Impact and Hospital Capacity by State dataset[https://healthdata.gov/dataset/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/6xf2-c3ie] 
 2. remove colomns except ("state, total_num_hospital, critical_staffing_shortage_anticipated_within_week_yes, inpatient_beds, inpatient_beds_used, inpatient_beds_used_covid, previous_day_admission_adult_covid_confirmed, total_adult_patients_hospitalized_confirmed_and_suspected_covid, total_staffed_adult_icu_beds, inpatient_beds_utilization, percent_of_inpatients_with_covid") 
+
+
+For the Spending Table: 
+1. Visit the website of Opportunity Insights, Economic Tracker of COVID19[https://www.tracktherecovery.org/]
+2. Download spending data set from [https://github.com/OpportunityInsights/EconomicTracker], more specifically from [https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md]
