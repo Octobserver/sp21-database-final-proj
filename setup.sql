@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS Country;
 CREATE TABLE Country(
  country_name   VARCHAR(50),
  location       VARCHAR(30),
@@ -7,11 +6,10 @@ CREATE TABLE Country(
  PRIMARY KEY(country_name)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/Country.txt' 
+LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/Country.txt' 
 INTO TABLE Country
 IGNORE 1 ROWS;
 
-DROP TABLE IF EXISTS Hospital;
 CREATE TABLE Hospital (
   iso_code                            VARCHAR(30),
   continent                           VARCHAR(30),
@@ -31,7 +29,6 @@ CREATE TABLE Hospital (
   PRIMARY KEY(iso_code)
 );
 
-DROP TABLE IF EXISTS HospitalLocatedIn;
 CREATE TABLE HospitalLocatedIn (
   iso_code                             VARCHAR(30),
   location                             VARCHAR(30),
@@ -44,7 +41,6 @@ LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/hospital.txt'
 INTO TABLE Hospital
 IGNORE 1 ROWS;
 
-DROP TABLE IF EXISTS Covid19RelatedSpending; 
 CREATE TABLE Covid19RelatedSpending(
   month                                   INT,
   day                                     INT, 
@@ -65,7 +61,6 @@ LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/Covid19RelatedSpendi
 INTO TABLE Covid19RelatedSpending
 IGNORE 1 ROWS;
 
-DROP TABLE IF EXISTS Covid19RelatedSpendingByCountry; 
 CREATE TABLE Covid19RelatedSpendingByCountry(
   statefips                            INT,
   location                             VARCHAR(30),
@@ -114,19 +109,6 @@ LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/Vacc.txt'
 INTO TABLE Vaccine
 IGNORE 1 ROWS;
 
-CREATE TABLE Country(
- country_name   VARCHAR(50),
- location       VARCHAR(30),
- continent      VARCHAR(30), 
- population     LONG,
- PRIMARY KEY(country_name)
-);
-
-LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/Country.txt' 
-INTO TABLE Country
-IGNORE 1 ROWS;
-
-
 CREATE TABLE CasesByCountry(
  date_stamp 	VARCHAR(30), 
  country_name	VARCHAR(30), 
@@ -156,7 +138,6 @@ LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/VaccByManufacturer.txt'
 INTO TABLE VaccinationByManufacturer
 IGNORE 1 ROWS;
 
-select * from VaccinationByManufacturer;
 
 CREATE TABLE VaccinationByCountry(
   country_name       VARCHAR(30),
