@@ -1,3 +1,5 @@
+Weina Dai wdai11
+FanboXu fxu13
 
 For the Hopital Table: 
 1. Download the Coronavirus (COVID-19) Hospitalizations dataset[https://ourworldindata.org/covid-hospitalizations] 
