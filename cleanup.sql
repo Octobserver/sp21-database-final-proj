@@ -1,4 +1,14 @@
+-- clean up the tables
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS VaccinationByCountry;
+DROP TABLE IF EXISTS VaccinationByManufacturer;
+DROP TABLE IF EXISTS CasesByCountry;
+DROP TABLE IF EXISTS Country;
+DROP TABLE IF EXISTS Vaccine;
+DROP TABLE IF EXISTS PublishedIn;
+DROP TABLE IF EXISTS Covid19RelatedTweets;
 DROP TABLE IF EXISTS Hospital;
 DROP TABLE IF EXISTS HospitalLocatedIn;
 DROP TABLE IF EXISTS SpendingByState;
 DROP TABLE IF EXISTS Covid19RelatedSpendingByCountry; 
+SET FOREIGN_KEY_CHECKS = 1;
