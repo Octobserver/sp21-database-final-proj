@@ -1,26 +1,30 @@
 DROP TABLE IF EXISTS Hospital;
 CREATE TABLE Hospital (
-  state                                                    VARCHAR(5),
-  total_num_hospital                                       INT, 
-  critical_staffing_shortage_anticipated_within_week_yes   INT,
-  inpatient_beds                                           INT, 
-  inpatient_beds_used                                      INT, 
-  inpatient_beds_used_covid                                INT, 
-  previous_day_admission_adult_covid_confirmed             INT,  
-  total_adult_patients_hospitalized_confirmed_and_suspected_covid INT, 
-  total_staffed_adult_icu_beds                             INT, 
-  inpatient_beds_utilization                               DECIMAL(10,1), 
-  percent_of_inpatients_with_covid                         DECIMAL(10,1), 
-  PRIMARY KEY(state)
+  iso_code                            VARCHAR(30),
+  continent                           VARCHAR(30),
+  location                            VARCHAR(35),
+  date                                DATETIME DEFAULT CURRENT_TIMESTAMP(), 
+  total_cases                         INTEGER, 
+  new_cases                           INTEGER, 
+  total_deaths                        INTEGER,  
+  new_deaths                          INTEGER, 
+  total_cases_per_million             DECIMAL(10,1), 
+  new_cases_per_million               DECIMAL(10,1), 
+  total_tests                         DECIMAL(10,1), 
+  total_tests_per_thousand            DECIMAL(10,1),
+  positive_rate                       DECIMAL(10,1),
+  handwashing_facilities              DECIMAL(10,1),
+  hospital_beds_per_thousand          DECIMAL(10,1),
+  PRIMARY KEY(iso_code),
+  FOREIGN KEY(location) REFERENCES Country(location)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/small-hospital.csv' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/hospital-small.txt' 
 INTO TABLE Hospital
-COLUMNS TERMINATED BY ','
-LINES STARTING BY '\n';
+IGNORE 1 ROWS;
 
-DROP TABLE IF EXISTS SpendingByState; 
-CREATE TABLE SpendingByState (
+DROP TABLE IF EXISTS Covid19RelatedSpending; 
+CREATE TABLE Covid19RelatedSpending(
   month                                   INT,
   day                                     INT, 
   statefips                               INT,
@@ -36,7 +40,6 @@ CREATE TABLE SpendingByState (
   PRIMARY KEY(statefips)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/small-SpendingByState.csv' 
-INTO TABLE SpendingByState
-COLUMNS TERMINATED BY ','
-LINES STARTING BY '\n';
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/Covid19RelatedSpending-small.txt' 
+INTO TABLE Covid19RelatedSpending
+IGNORE 1 ROWS;
