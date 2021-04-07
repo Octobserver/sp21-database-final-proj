@@ -11,3 +11,32 @@ For the Spending Table:
 4. Rename colomn names according to description in https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md
 5. Remove empty data rows 
 6. Keep only colomns (month, day, statefips, spend_accomodation_food, spend_arts_entertainment, spend_all, spend_general_merchandise, spend_grocery_food_store, spend_healthcare_social_assistance, spend_transportation_warehousing, spend_all_inchigh, spend_all_inclow, spend_all_incmiddle)
+
+For the Country Table:
+1. Download locations.csv from https://github.com/owid/covid-19-data/tree/master/public/data/jhu
+2. Remove the column population_year
+3. Remove empty rows.
+
+For the Vaccine Table:
+1. Download vaccinations-by-manufacturer.csv from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations
+2. extract the column named vaccine into a separate .txt file.
+3. When the data is loaded in MySql, duplicated rows will be removed automatically.
+
+For the  Covid19RelatedTweets Table:
+1. Download tweetid_userid_keyword_topics_sentiments_emotions (5k sample).csv from https://www.openicpsr.org/openicpsr/project/120321/version/V6/view?path=/openicpsr/120321/fcr:versions/V6/Twitter-COVID-dataset---Jan-2021/tweetid_userid_keyword_topics_sentiments_emotions--5k-sample-.csv&type=file 
+2. Remove the columns t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, valence_intensity, and country_region.
+3. Remove empty rows.
+4. Rename the columns as tweetID, userID,	anger_intensity,	fear_intensity,	sadness_intensity,	joy_intensity,	sentiment,	emotion,	keyword,	date_stamp.
+
+For the PublishedIn Table:
+1. Download tweetid_userid_keyword_topics_sentiments_emotions (5k sample).csv from https://www.openicpsr.org/openicpsr/project/120321/version/V6/view?path=/openicpsr/120321/fcr:versions/V6/Twitter-COVID-dataset---Jan-2021/tweetid_userid_keyword_topics_sentiments_emotions--5k-sample-.csv&type=file 
+2. Extract the columns tweetID and country_region.
+3. Rename them as tweetID and country_name.
+4. There are some tweets whose regions cannot be tracked, but since the sample is large, it should be ok.
+
+For the CasesByCountry Table:
+1. Download locations.csv from https://github.com/owid/covid-19-data/tree/master/public/data/jhu
+2. Remove the column population_year
+3. Remove empty rows.
+
+
