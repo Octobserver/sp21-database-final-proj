@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS Hospital;
 CREATE TABLE Hospital (
   iso_code                            VARCHAR(30),
   continent                           VARCHAR(30),
-  location                            VARCHAR(35),
+  location                            VARCHAR(30),
   date                                DATETIME DEFAULT CURRENT_TIMESTAMP(), 
   total_cases                         INTEGER, 
   new_cases                           INTEGER, 
@@ -19,12 +19,21 @@ CREATE TABLE Hospital (
   FOREIGN KEY(location) REFERENCES Country(location)
 );
 
+DROP TABLE IF EXISTS HospitalLocatedIn;
+CREATE TABLE HospitalLocatedIn (
+  iso_code                             VARCHAR(30),
+  location                             VARCHAR(30),
+  PRIMARY KEY(iso_code),
+  FOREIGN KEY(location) REFERENCES Country(location)
+);
+
+
 LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/hospital.txt' 
 INTO TABLE Hospital
 IGNORE 1 ROWS;
 
 DROP TABLE IF EXISTS Covid19RelatedSpending; 
-CREATE TABLE Covid19RelatedSpending (
+CREATE TABLE Covid19RelatedSpending(
   month                                   INT,
   day                                     INT, 
   statefips                               INT,
@@ -43,3 +52,11 @@ CREATE TABLE Covid19RelatedSpending (
 LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/Covid19RelatedSpending.txt' 
 INTO TABLE Covid19RelatedSpending
 IGNORE 1 ROWS;
+
+DROP TABLE IF EXISTS Covid19RelatedSpendingByCountry; 
+CREATE TABLE Covid19RelatedSpendingByCountry(
+  statefips                            INT,
+  location                             VARCHAR(30),
+  PRIMARY KEY(statefips),
+  FOREIGN KEY(location) REFERENCES Country(location)
+);
