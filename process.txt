@@ -1,7 +1,7 @@
 
 For the Hopital Table: 
-1. Download the COVID-19 Reported Patient Impact and Hospital Capacity by State dataset[https://healthdata.gov/dataset/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/6xf2-c3ie] 
-2. remove colomns except ("state, total_num_hospital, critical_staffing_shortage_anticipated_within_week_yes, inpatient_beds, inpatient_beds_used, inpatient_beds_used_covid, previous_day_admission_adult_covid_confirmed, total_adult_patients_hospitalized_confirmed_and_suspected_covid, total_staffed_adult_icu_beds, inpatient_beds_utilization, percent_of_inpatients_with_covid") 
+1. Download the Coronavirus (COVID-19) Hospitalizations dataset[https://ourworldindata.org/covid-hospitalizations] 
+2. remove colomns except (iso_code, continent, location, date, total_cases, new_cases, total_deaths, new_deaths, total_cases_per_million, new_cases_per_million, total_tests, total_tests_per_thousand, positive_rate, handwashing_facilities, hospital_beds_per_thousand) 
 
 
 For the Spending Table: 
