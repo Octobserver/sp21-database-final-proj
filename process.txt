@@ -35,8 +35,20 @@ For the PublishedIn Table:
 4. There are some tweets whose regions cannot be tracked, but since the sample is large, it should be ok.
 
 For the CasesByCountry Table:
-1. Download locations.csv from https://github.com/owid/covid-19-data/tree/master/public/data/jhu
-2. Remove the column population_year
+1. Download full_data.csv from https://github.com/owid/covid-19-data/tree/master/public/data/jhu
+2. Remove the columns weekly_cases,weekly_deaths,biweekly_cases, and biweekly_deaths.
 3. Remove empty rows.
+4. Rename the columns as date_stamp,	country_name,	new_cases,	new_deaths,	total_cases,	total_deaths
+
+For the VaccinationByManufacturer Table:
+1. Download vaccinations-by-manufacturer.csv from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.
+2. Rename the columns as country_name, date_stamp, vaccine_type, total_vaccinations.
+
+For the VaccinationByCountry Table:
+1. Download vaccinatios.csv from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.
+2.  Remove the columns iso_code, and people_vaccinated.
+3. Rename the columns as ccountry_name,	date_stamp,	total_vaccinations,	people_fully_vaccinated	daily_vaccinations,	total_vaccinations_per_hundred,	people_fully_vaccinated_per_hundred,	daily_vaccinations_per_million.
+
+
 
 
