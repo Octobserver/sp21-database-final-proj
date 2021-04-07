@@ -15,7 +15,8 @@ CREATE TABLE Hospital (
   positive_rate                       DECIMAL(10,1),
   handwashing_facilities              DECIMAL(10,1),
   hospital_beds_per_thousand          DECIMAL(10,1),
-  PRIMARY KEY(iso_code)
+  PRIMARY KEY(iso_code),
+  FOREIGN KEY(location) REFERENCES Country(location)
 );
 
 LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/hospital.txt' 
