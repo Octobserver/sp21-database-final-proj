@@ -1,0 +1,11 @@
+date	country	new_cases	new_deaths	total_cases	total_deaths
+3/24/20	Afghanistan	2	0	43	1
+3/25/20	Afghanistan	33	1	76	2
+3/26/20	Afghanistan	4	1	80	3
+3/27/20	Afghanistan	11	0	91	3
+3/28/20	Afghanistan	16	1	107	4
+3/29/20	Afghanistan	11	0	118	4
+3/30/20	Afghanistan	28	0	146	4
+3/31/20	Afghanistan	29	0	175	4
+4/1/20	Afghanistan	22	0	197	4
+4/2/20	Afghanistan	43	0	240	4

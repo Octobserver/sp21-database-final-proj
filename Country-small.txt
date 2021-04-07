@@ -1,0 +1,11 @@
+Country/Region	location	continent	population
+Afghanistan	Afghanistan	Asia	38928341
+Albania	Albania	Europe	2877800
+Algeria	Algeria	Africa	43851043
+Andorra	Andorra	Europe	77265
+Angola	Angola	Africa	32866268
+Antigua and Barbuda	Antigua and Barbuda	North America	97928
+Argentina	Argentina	South America	45195777
+Armenia	Armenia	Asia	2963234
+Australia	Australia	Oceania	25499881
+Austria	Austria	Europe	9006400

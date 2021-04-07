@@ -1,0 +1,12 @@
+vaccine_type
+Moderna
+Oxford/AstraZeneca
+Pfizer/BioNTech
+Moderna
+Oxford/AstraZeneca
+Pfizer/BioNTech
+Moderna
+Oxford/AstraZeneca
+Pfizer/BioNTech
+Moderna
+Oxford/AstraZeneca

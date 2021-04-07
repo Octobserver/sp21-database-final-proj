@@ -1,0 +1,192 @@
+Country/Region	location	continent	population
+Afghanistan	Afghanistan	Asia	38928341
+Albania	Albania	Europe	2877800
+Algeria	Algeria	Africa	43851043
+Andorra	Andorra	Europe	77265
+Angola	Angola	Africa	32866268
+Antigua and Barbuda	Antigua and Barbuda	North America	97928
+Argentina	Argentina	South America	45195777
+Armenia	Armenia	Asia	2963234
+Australia	Australia	Oceania	25499881
+Austria	Austria	Europe	9006400
+Azerbaijan	Azerbaijan	Asia	10139175
+Bahamas	Bahamas	North America	393248
+Bahrain	Bahrain	Asia	1701583
+Bangladesh	Bangladesh	Asia	164689383
+Barbados	Barbados	North America	287371
+Belarus	Belarus	Europe	9449321
+Belgium	Belgium	Europe	11589616
+Belize	Belize	North America	397621
+Benin	Benin	Africa	12123198
+Bhutan	Bhutan	Asia	771612
+Bolivia	Bolivia	South America	11673029
+Bosnia and Herzegovina	Bosnia and Herzegovina	Europe	3280815
+Botswana	Botswana	Africa	2351625
+Brazil	Brazil	South America	212559409
+Brunei	Brunei	Asia	437483
+Bulgaria	Bulgaria	Europe	6948445
+Burkina Faso	Burkina Faso	Africa	20903278
+Burundi	Burundi	Africa	11890781
+Cambodia	Cambodia	Asia	16718971
+Cameroon	Cameroon	Africa	26545864
+Canada	Canada	North America	37742157
+Cabo Verde	Cape Verde	Africa	555988
+Central African Republic	Central African Republic	Africa	4829764
+Chad	Chad	Africa	16425859
+Chile	Chile	South America	19116209
+China	China	Asia	1439323774
+Colombia	Colombia	South America	50882884
+Comoros	Comoros	Africa	869595
+Congo (Brazzaville)	Congo	Africa	5518092
+Costa Rica	Costa Rica	North America	5094114
+Cote d'Ivoire	Cote d'Ivoire	Africa	26378275
+Croatia	Croatia	Europe	4105268
+Cuba	Cuba	North America	11326616
+Cyprus	Cyprus	Europe	875899
+Czechia	Czechia	Europe	10708982
+Congo (Kinshasa)	Democratic Republic of Congo	Africa	89561404
+Denmark	Denmark	Europe	5792203
+Djibouti	Djibouti	Africa	988002
+Dominica	Dominica	North America	71991
+Dominican Republic	Dominican Republic	North America	10847904
+Ecuador	Ecuador	South America	17643060
+Egypt	Egypt	Africa	102334403
+El Salvador	El Salvador	North America	6486201
+Equatorial Guinea	Equatorial Guinea	Africa	1402985
+Eritrea	Eritrea	Africa	3546427
+Estonia	Estonia	Europe	1326539
+Eswatini	Eswatini	Africa	1160164
+Ethiopia	Ethiopia	Africa	114963583
+Fiji	Fiji	Oceania	896444
+Finland	Finland	Europe	5540718
+France	France	Europe	68147687
+Gabon	Gabon	Africa	2225728
+Gambia	Gambia	Africa	2416664
+Georgia	Georgia	Asia	3989175
+Germany	Germany	Europe	83783945
+Ghana	Ghana	Africa	31072945
+Greece	Greece	Europe	10423056
+Grenada	Grenada	North America	112519
+Guatemala	Guatemala	North America	17915567
+Guinea	Guinea	Africa	13132792
+Guinea-Bissau	Guinea-Bissau	Africa	1967998
+Guyana	Guyana	South America	786559
+Haiti	Haiti	North America	11402533
+Honduras	Honduras	North America	9904608
+Hungary	Hungary	Europe	9660350
+Iceland	Iceland	Europe	341250
+India	India	Asia	1380004385
+Indonesia	Indonesia	Asia	273523621
+International	International		
+Iran	Iran	Asia	83992953
+Iraq	Iraq	Asia	40222503
+Ireland	Ireland	Europe	4937796
+Israel	Israel	Asia	8655541
+Italy	Italy	Europe	60461828
+Jamaica	Jamaica	North America	2961161
+Japan	Japan	Asia	126476458
+Jordan	Jordan	Asia	10203140
+Kazakhstan	Kazakhstan	Asia	18776707
+Kenya	Kenya	Africa	53771300
+Kosovo	Kosovo	Europe	1932774
+Kuwait	Kuwait	Asia	4270563
+Kyrgyzstan	Kyrgyzstan	Asia	6524191
+Laos	Laos	Asia	7275556
+Latvia	Latvia	Europe	1886202
+Lebanon	Lebanon	Asia	6825442
+Lesotho	Lesotho	Africa	2142252
+Liberia	Liberia	Africa	5057677
+Libya	Libya	Africa	6871287
+Liechtenstein	Liechtenstein	Europe	38137
+Lithuania	Lithuania	Europe	2722291
+Luxembourg	Luxembourg	Europe	625976
+Madagascar	Madagascar	Africa	27691019
+Malawi	Malawi	Africa	19129955
+Malaysia	Malaysia	Asia	32365998
+Maldives	Maldives	Asia	540542
+Mali	Mali	Africa	20250834
+Malta	Malta	Europe	441539
+Marshall Islands	Marshall Islands	Oceania	59194
+Mauritania	Mauritania	Africa	4649660
+Mauritius	Mauritius	Africa	1271767
+Mexico	Mexico	North America	128932753
+Micronesia	Micronesia (country)	Oceania	115021
+Moldova	Moldova	Europe	4033963
+Monaco	Monaco	Europe	39244
+Mongolia	Mongolia	Asia	3278292
+Montenegro	Montenegro	Europe	628062
+Morocco	Morocco	Africa	36910558
+Mozambique	Mozambique	Africa	31255435
+Burma	Myanmar	Asia	54409794
+Namibia	Namibia	Africa	2540916
+Nepal	Nepal	Asia	29136808
+Netherlands	Netherlands	Europe	17134873
+New Zealand	New Zealand	Oceania	4822233
+Nicaragua	Nicaragua	North America	6624554
+Niger	Niger	Africa	24206636
+Nigeria	Nigeria	Africa	206139587
+North Macedonia	North Macedonia	Europe	2083380
+Norway	Norway	Europe	5421242
+Oman	Oman	Asia	5106622
+Pakistan	Pakistan	Asia	220892331
+West Bank and Gaza	Palestine	Asia	5101416
+Panama	Panama	North America	4314768
+Papua New Guinea	Papua New Guinea	Oceania	8947027
+Paraguay	Paraguay	South America	7132530
+Peru	Peru	South America	32971846
+Philippines	Philippines	Asia	109581085
+Poland	Poland	Europe	37846605
+Portugal	Portugal	Europe	10196707
+Qatar	Qatar	Asia	2881060
+Romania	Romania	Europe	19237682
+Russia	Russia	Europe	145934460
+Rwanda	Rwanda	Africa	12952209
+Saint Kitts and Nevis	Saint Kitts and Nevis	North America	53192
+Saint Lucia	Saint Lucia	North America	183629
+Saint Vincent and the Grenadines	Saint Vincent and the Grenadines	North America	110947
+Samoa	Samoa	Oceania	198410
+San Marino	San Marino	Europe	33938
+Sao Tome and Principe	Sao Tome and Principe	Africa	219161
+Saudi Arabia	Saudi Arabia	Asia	34813867
+Senegal	Senegal	Africa	16743930
+Serbia	Serbia	Europe	6804596
+Seychelles	Seychelles	Africa	98340
+Sierra Leone	Sierra Leone	Africa	7976985
+Singapore	Singapore	Asia	5850343
+Slovakia	Slovakia	Europe	5459643
+Slovenia	Slovenia	Europe	2078932
+Solomon Islands	Solomon Islands	Oceania	686878
+Somalia	Somalia	Africa	15893219
+South Africa	South Africa	Africa	59308690
+"Korea, South"	South Korea	Asia	51269183
+South Sudan	South Sudan	Africa	11193729
+Spain	Spain	Europe	46754783
+Sri Lanka	Sri Lanka	Asia	21413250
+Sudan	Sudan	Africa	43849269
+Suriname	Suriname	South America	586634
+Sweden	Sweden	Europe	10099270
+Switzerland	Switzerland	Europe	8654618
+Syria	Syria	Asia	17500657
+Taiwan*	Taiwan	Asia	23816775
+Tajikistan	Tajikistan	Asia	9537642
+Tanzania	Tanzania	Africa	59734213
+Thailand	Thailand	Asia	69799978
+Timor-Leste	Timor	Asia	1318442
+Togo	Togo	Africa	8278737
+Trinidad and Tobago	Trinidad and Tobago	North America	1399491
+Tunisia	Tunisia	Africa	11818618
+Turkey	Turkey	Asia	84339067
+Uganda	Uganda	Africa	45741000
+Ukraine	Ukraine	Europe	43733759
+United Arab Emirates	United Arab Emirates	Asia	9890400
+United Kingdom	United Kingdom	Europe	67886004
+US	United States	North America	331002647
+Uruguay	Uruguay	South America	3473727
+Uzbekistan	Uzbekistan	Asia	33469199
+Vanuatu	Vanuatu	Oceania	307150
+Holy See	Vatican	Europe	809
+Venezuela	Venezuela	South America	28435943
+Vietnam	Vietnam	Asia	97338583
+Yemen	Yemen	Asia	29825968
+Zambia	Zambia	Africa	18383956
+Zimbabwe	Zimbabwe	Africa	14862927
