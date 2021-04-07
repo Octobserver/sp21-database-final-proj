@@ -1,3 +1,15 @@
+CREATE TABLE Country(
+ country_name   VARCHAR(50),
+ location       VARCHAR(30),
+ continent      VARCHAR(30), 
+ population     LONG,
+ PRIMARY KEY(country_name)
+);
+
+LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/Country-small.txt' 
+INTO TABLE Country
+IGNORE 1 ROWS;
+
 DROP TABLE IF EXISTS Hospital;
 CREATE TABLE Hospital (
   iso_code                            VARCHAR(30),
@@ -100,19 +112,6 @@ CREATE TABLE Vaccine(
 LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/Vacc-small.txt' 
 INTO TABLE Vaccine
 IGNORE 1 ROWS;
-
-CREATE TABLE Country(
- country_name   VARCHAR(50),
- location       VARCHAR(30),
- continent      VARCHAR(30), 
- population     LONG,
- PRIMARY KEY(country_name)
-);
-
-LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/Country-small.txt' 
-INTO TABLE Country
-IGNORE 1 ROWS;
-
 
 CREATE TABLE CasesByCountry(
  date_stamp 	VARCHAR(30), 
