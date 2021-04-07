@@ -1,3 +1,16 @@
+DROP TABLE IF EXISTS Country;
+CREATE TABLE Country(
+ country_name   VARCHAR(50),
+ location       VARCHAR(30),
+ continent      VARCHAR(30), 
+ population     LONG,
+ PRIMARY KEY(country_name)
+);
+
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/Country.txt' 
+INTO TABLE Country
+IGNORE 1 ROWS;
+
 DROP TABLE IF EXISTS Hospital;
 CREATE TABLE Hospital (
   iso_code                            VARCHAR(30),
@@ -15,8 +28,7 @@ CREATE TABLE Hospital (
   positive_rate                       DECIMAL(10,1),
   handwashing_facilities              DECIMAL(10,1),
   hospital_beds_per_thousand          DECIMAL(10,1),
-  PRIMARY KEY(iso_code),
-  FOREIGN KEY(location) REFERENCES Country(location)
+  PRIMARY KEY(iso_code)
 );
 
 DROP TABLE IF EXISTS HospitalLocatedIn;
