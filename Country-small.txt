@@ -9,3 +9,4 @@ Argentina	Argentina	South America	45195777
 Armenia	Armenia	Asia	2963234
 Australia	Australia	Oceania	25499881
 Austria	Austria	Europe	9006400
+US	United States	North America	331002647

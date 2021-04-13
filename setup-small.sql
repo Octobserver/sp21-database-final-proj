@@ -29,6 +29,7 @@ IGNORE 1 ROWS;
 
 DROP TABLE IF EXISTS Hospital;
 CREATE TABLE Hospital (
+  reportID                            VARCHAR(30),
   iso_code                            VARCHAR(30),
   continent                           VARCHAR(30),
   country_name                        VARCHAR(30),
@@ -44,13 +45,13 @@ CREATE TABLE Hospital (
   positive_rate                       DECIMAL(10,1),
   handwashing_facilities              DECIMAL(10,1),
   hospital_beds_per_thousand          DECIMAL(10,1),
-  PRIMARY KEY(iso_code)
+  PRIMARY KEY(reportID)
 );
 
 CREATE TABLE HospitalLocatedIn (
-  iso_code                             VARCHAR(30),
+  reportID                             VARCHAR(30),
   country_name                         VARCHAR(30),
-  PRIMARY KEY(iso_code),
+  PRIMARY KEY(reportID),
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
@@ -61,6 +62,7 @@ IGNORE 1 ROWS;
 
 DROP TABLE IF EXISTS Covid19RelatedSpending; 
 CREATE TABLE Covid19RelatedSpending(
+  reportID                                VARCHAR(30),
   month                                   INT,
   day                                     INT, 
   statefips                               INT,
@@ -70,10 +72,11 @@ CREATE TABLE Covid19RelatedSpending(
   spend_general_merchandise               DECIMAL(10,1),
   spend_grocery_food_store                DECIMAL(10,1), 
   spend_healthcare_social_assistance      DECIMAL(10,1), 
+  spend_transportation_warehousing        DECIMAL(10,1), 
   spend_all_inchigh                       DECIMAL(10,1), 
   spend_all_inclow                        DECIMAL(10,1), 
   spend_all_incmiddle                     DECIMAL(10,1),
-  PRIMARY KEY(statefips)
+  PRIMARY KEY(reportID)
 );
 
 LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/Covid19RelatedSpending-small.txt' 
@@ -82,11 +85,12 @@ IGNORE 1 ROWS;
 
 DROP TABLE IF EXISTS Covid19RelatedSpendingByCountry; 
 CREATE TABLE Covid19RelatedSpendingByCountry(
-  statefips                            INT,
+  reportID                                 VARCHAR(30),
   country_name                             VARCHAR(30),
-  PRIMARY KEY(statefips),
+  PRIMARY KEY(reportID),
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
+
 
 CREATE TABLE Covid19RelatedTweets(
   tweetID  VARCHAR(30),
