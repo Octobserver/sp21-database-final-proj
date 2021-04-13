@@ -13,7 +13,7 @@ IGNORE 1 ROWS;
 CREATE TABLE Hospital (
   iso_code                            VARCHAR(30),
   continent                           VARCHAR(30),
-  location                            VARCHAR(30),
+  country_name                        VARCHAR(30),
   date                                DATETIME DEFAULT CURRENT_TIMESTAMP(), 
   total_cases                         INTEGER, 
   new_cases                           INTEGER, 
@@ -31,9 +31,9 @@ CREATE TABLE Hospital (
 
 CREATE TABLE HospitalLocatedIn (
   iso_code                             VARCHAR(30),
-  location                             VARCHAR(30),
+  country_name                             VARCHAR(30),
   PRIMARY KEY(iso_code),
-  FOREIGN KEY(location) REFERENCES Country(location)
+  FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
 
@@ -63,9 +63,9 @@ IGNORE 1 ROWS;
 
 CREATE TABLE Covid19RelatedSpendingByCountry(
   statefips                            INT,
-  location                             VARCHAR(30),
+  country_name                         VARCHAR(30),
   PRIMARY KEY(statefips),
-  FOREIGN KEY(location) REFERENCES Country(location)
+  FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
 CREATE TABLE Covid19RelatedTweets(
