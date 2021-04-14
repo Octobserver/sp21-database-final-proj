@@ -116,7 +116,8 @@ CREATE TABLE PublishedIn (
   tweetID       VARCHAR(30),
   country_name    VARCHAR(30),
   PRIMARY KEY(tweetID),
-  FOREIGN KEY(tweetID) REFERENCES Covid19RelatedTweets(tweetID)
+  FOREIGN KEY(tweetID) REFERENCES Covid19RelatedTweets(tweetID),
+  FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
 LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/PublishedIn-small.txt' 
@@ -150,7 +151,7 @@ IGNORE 1 ROWS;
 
 CREATE TABLE VaccinationByManufacturer(
   country_name       VARCHAR(30),
-  date_stamp     DATETIME DEFAULT CURRENT_TIMESTAMP(),
+  date_stamp        VARCHAR(30),
   vaccine_type      VARCHAR(30),
   total_vaccinations       LONG,
   PRIMARY KEY(country_name, vaccine_type, date_stamp),
@@ -166,7 +167,7 @@ select * from VaccinationByManufacturer;
 
 CREATE TABLE VaccinationByCountry(
   country_name       VARCHAR(30),
-  date_stamp     DATETIME DEFAULT CURRENT_TIMESTAMP(),
+  date_stamp     VARCHAR(30),
   total_vaccinations    INTEGER,	
   people_fully_vaccinated       INTEGER,	
   daily_vaccinations    INTEGER,
