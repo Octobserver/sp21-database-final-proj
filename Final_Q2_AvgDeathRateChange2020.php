@@ -5,7 +5,7 @@
     //open a connection to dbase server 
     include 'open.php'; 
 
-    echo "<h2>Question 2:  How did the average death rate differ before and after June 2020 in the world? </h2><br>";
+    echo "<h2>Question 2: How did the average death rate differ before and after June 2020 in the world? </h2><br>";
 
     echo "<br><br>"; 
 	$result = $conn->query("CALL AvgDeathRateChange2020();");

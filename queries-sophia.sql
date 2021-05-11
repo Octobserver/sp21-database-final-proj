@@ -4,7 +4,7 @@ FROM Hospital
 GROUP BY continent;
 
 -- Question 2:  How did the average death rate change before and after June 2020 in the world?
-SELECT AVG2020.avg_2020 - AVG2021.avg_2021 
+SELECT AVG2020.avg_2020 - AVG2021.avg_2021 AS 2020_to_2021_Change
 FROM 
         (SELECT AVG(total_cases_per_million) AS avg_2020
         FROM Hospital 
