@@ -1,4 +1,4 @@
---- Final_Q4_TestedPercentage.sql stored procedure 
+--- Final_Q3_TestedPercentage.sql stored procedure 
 
 DELIMITER //
 

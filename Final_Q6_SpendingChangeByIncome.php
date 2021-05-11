@@ -26,7 +26,7 @@
             echo "</table>";
 	    }
         } else {
-            echo "Call to Final_Q7_SpendingChangeByIncome.sql failed 	<br>"; 
+            echo "Call to Final_Q6_SpendingChangeByIncome.sql failed 	<br>"; 
         }
 
     $conn->close(); 

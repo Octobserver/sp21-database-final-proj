@@ -24,7 +24,7 @@
             echo "</table>";
 	    }
         } else {
-            echo "Call to Final_Q5_StateHealthSpending.sql failed <br>"; 
+            echo "Call to Final_Q4_StateHealthSpending.sql failed <br>"; 
         }
 
     $conn->close(); 

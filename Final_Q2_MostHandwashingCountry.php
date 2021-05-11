@@ -25,7 +25,7 @@
             echo "</table>";
 	    }
         } else {
-            echo "Call to Final_Q3_MostHandwashingCountry.sql failed 	<br>"; 
+            echo "Call to Final_Q2A_MostHandwashingCountry.sql failed 	<br>"; 
         }
 
     $conn->close(); 

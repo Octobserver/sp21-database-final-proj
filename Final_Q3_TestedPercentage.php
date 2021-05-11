@@ -28,7 +28,7 @@
                 echo "</table>";
     	    }
             } else {
-                echo "Call to Final_Q4_TestedPercentage.sql failed 	<br>"; 
+                echo "Call to Final_Q3_TestedPercentage.sql failed 	<br>"; 
             }
         } else {
         echo "not set"; 

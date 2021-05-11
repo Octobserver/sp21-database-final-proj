@@ -1,4 +1,4 @@
---- Final_Q3_MostHandwashingCountry.sql stored procedure 
+--- Final_Q2_MostHandwashingCountry.sql stored procedure 
 
 DELIMITER //
 

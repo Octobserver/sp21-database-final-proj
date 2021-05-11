@@ -15,7 +15,7 @@
 	    }
 	    else {
             echo "<table border=\"2px solid black\">"; 
-            echo "<tr> <td>statefips</td> <td>avg_food</td> <td>avg_health</td> <td>avg_entertain</td> <td>avg_grocery</td></tr>"; 
+            echo "<tr> <td>statefips</td><td>avg_food</td><td>avg_health</td><td>avg_entertain</td><td>avg_grocery</td></tr>"; 
             foreach($result as $row) {
                 echo "<tr>"; 
                 echo "<td>".$row["statefips"]."</td>"; 
@@ -28,7 +28,7 @@
             echo "</table>";
 	    }
         } else {
-            echo "Call to Final_Q6_USSpendingChange.sql failed 	<br>"; 
+            echo "Call to Final_Q5_USSpendingChange.sql failed 	<br>"; 
         }
 
     $conn->close(); 
