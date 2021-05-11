@@ -44,7 +44,7 @@ window.onload = function () {
         exportEnabled: true,
         theme: "light1", // "light1", "light2", "dark1", "dark2"
         title:{
-            text: "PHP Line Chart from Database - MySQLi"
+            text: "Line Chart of Total Cases per Million in Each Continent"
         },
         data: [{
             type: "line", //change type to column, bar, line, area, pie, etc  
