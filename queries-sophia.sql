@@ -1,5 +1,5 @@
 -- Question 1: What is the total_cases_per_million for hospitals in each continent? 
-SELECT continent, AVG(total_cases_per_million)
+SELECT continent, SUM(total_cases_per_million) AS total_cases
 FROM Hospital 
 GROUP BY continent;
 

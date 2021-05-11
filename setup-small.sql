@@ -23,7 +23,7 @@ CREATE TABLE Country(
  PRIMARY KEY(country_name)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/Country-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/Country-small.txt' 
 INTO TABLE Country
 IGNORE 1 ROWS;
 
@@ -56,7 +56,7 @@ CREATE TABLE HospitalLocatedIn (
 );
 
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/hospital-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/hospital-small.txt' 
 INTO TABLE Hospital
 IGNORE 1 ROWS;
 
@@ -79,7 +79,7 @@ CREATE TABLE Covid19RelatedSpending(
   PRIMARY KEY(reportID)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/Covid19RelatedSpending-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/Covid19RelatedSpending-small.txt' 
 INTO TABLE Covid19RelatedSpending
 IGNORE 1 ROWS;
 
@@ -107,7 +107,7 @@ CREATE TABLE Covid19RelatedTweets(
 );
 
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/Covid19RelatedTweets-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/Covid19RelatedTweets-small.txt' 
 INTO TABLE Covid19RelatedTweets
 IGNORE 1 ROWS;
 
@@ -120,7 +120,7 @@ CREATE TABLE PublishedIn (
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/PublishedIn-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/PublishedIn-small.txt' 
 INTO TABLE PublishedIn
 IGNORE 1 ROWS;
 
@@ -130,7 +130,7 @@ CREATE TABLE Vaccine(
  PRIMARY KEY(vaccine_type)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/Vacc-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/Vacc-small.txt' 
 INTO TABLE Vaccine
 IGNORE 1 ROWS;
 
@@ -145,7 +145,7 @@ CREATE TABLE CasesByCountry(
  FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/CaseByCountry-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/CaseByCountry-small.txt' 
 INTO TABLE CasesByCountry
 IGNORE 1 ROWS;
 
@@ -159,7 +159,7 @@ CREATE TABLE VaccinationByManufacturer(
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/VaccByManufacturer-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/VaccByManufacturer-small.txt' 
 INTO TABLE VaccinationByManufacturer
 IGNORE 1 ROWS;
 
@@ -178,6 +178,6 @@ CREATE TABLE VaccinationByCountry(
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/database-phase-c-main/VaccByCountry-small.txt' 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/VaccByCountry-small.txt' 
 INTO TABLE VaccinationByCountry
 IGNORE 1 ROWS;
