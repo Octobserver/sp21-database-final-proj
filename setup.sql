@@ -68,6 +68,18 @@ CREATE TABLE Covid19RelatedSpendingByCountry(
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
+
+DROP TABLE IF EXISTS USStatefips; 
+CREATE TABLE USStatefips(
+  stname                                 VARCHAR(30),
+  st                                     INT,
+  stusps                                 VARCHAR(5),
+  PRIMARY KEY(st)
+);
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/us-state-ansi-fips.txt' 
+INTO TABLE USStatefips
+IGNORE 1 ROWS;
+
 CREATE TABLE Covid19RelatedTweets(
   tweetID  VARCHAR(30),
   userID    VARCHAR(30) NOT NULL,

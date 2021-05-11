@@ -15,10 +15,10 @@
 	    }
 	    else {
             echo "<table border=\"2px solid black\">"; 
-            echo "<tr> <td>statefips</td><td>avg_food</td><td>avg_health</td><td>avg_entertain</td><td>avg_grocery</td></tr>"; 
+            echo "<tr> <td>stname</td><td>avg_food</td><td>avg_health</td><td>avg_entertain</td><td>avg_grocery</td></tr>"; 
             foreach($result as $row) {
                 echo "<tr>"; 
-                echo "<td>".$row["statefips"]."</td>"; 
+                echo "<td>".$row["stname"]."</td>"; 
                 echo "<td>".$row["avg_food"]."</td>"; 
                 echo "<td>".$row["avg_health"]."</td>"; 
                 echo "<td>".$row["avg_entertain"]."</td>"; 

@@ -6,10 +6,10 @@ DROP PROCEDURE IF EXISTS StateHealthSpending //
 
 CREATE PROCEDURE StateHealthSpending() 
 BEGIN 
-    SELECT statefips, avg_health
-	FROM (SELECT statefips, AVG(spend_healthcare_social_assistance) AS avg_health
-      FROM Covid19RelatedSpending
-      GROUP BY statefips) AS maxHealthIncrease; 
+    SELECT stname, avg_health
+	FROM (SELECT U.stname, AVG(spend_healthcare_social_assistance) AS avg_health
+      FROM Covid19RelatedSpending AS C JOIN USStatefips AS U ON C.statefips = U.st 
+      GROUP BY U.stname) AS HealthChange;
 END; // 
 
 

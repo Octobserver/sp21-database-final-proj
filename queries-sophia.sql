@@ -3,43 +3,44 @@ SELECT continent, SUM(total_cases_per_million) AS total_cases
 FROM Hospital 
 GROUP BY continent;
 
--- Question 2:  How did the average death rate change before and after June 2020 in the world?
-SELECT AVG2020.avg_2020 - AVG2021.avg_2021 AS 2020_to_2021_Change
-FROM 
-        (SELECT AVG(total_cases_per_million) AS avg_2020
-        FROM Hospital 
-        WHERE DATEDIFF('2020-12-30', date) > 0) AS AVG2020, 
-        (SELECT AVG(total_cases_per_million) AS avg_2021
-        FROM Hospital 
-        WHERE DATEDIFF('2020-12-30', date) < 0) AS AVG2021; 
-
--- Question 3: Which country has hospitals with most equipped handwashing facility? 
+-- Question 2: Which country has hospitals with most equipped handwashing facility? 
 SELECT country_name, MAX(avg_handwashing) AS max_handwashing_count
 FROM (SELECT country_name, AVG(handwashing_facilities) AS avg_handwashing
         FROM Hospital
         GROUP BY country_name) AS maxHandwashing; 
 
--- Question 4: List tested % of population in each country
+-- Question 3: List tested % of population in each country
 SELECT H.country_name, H.total_tests / C.population AS tested_percentage
 FROM Hospital AS H JOIN 
      Country AS C ON H.country_name = C.country_name; 
 
 
--- Question 5: List decrease in spending on healthcare and social assistance spending for each US State? 
-SELECT statefips, avg_health
-FROM (SELECT statefips, AVG(spend_healthcare_social_assistance) AS avg_health
-      FROM Covid19RelatedSpending
-      GROUP BY statefips) AS maxHealthIncrease;
+-- Question 4: List decrease in spending on healthcare and social assistance spending for each US State? 
+SELECT stname, avg_health
+FROM (SELECT U.stname, AVG(spend_healthcare_social_assistance) AS avg_health
+      FROM Covid19RelatedSpending AS C JOIN USStatefips AS U ON C.statefips = U.st 
+      GROUP BY U.stname) AS HealthChange;
 
--- Question 6: List the average change rate in each spending category in US? 
-SELECT statefips, AVG(spend_accomodation_food) AS avg_food, AVG(spend_healthcare_social_assistance) AS avg_health, AVG(spend_arts_entertainment) AS avg_entertain, AVG(spend_grocery_food_store) AS avg_grocery
-FROM Covid19RelatedSpending
-GROUP BY statefips;
+-- Question 5: List the average change rate in each spending category in US? 
+SELECT stname, AVG(spend_accomodation_food) AS avg_food, AVG(spend_healthcare_social_assistance) AS avg_health, AVG(spend_arts_entertainment) AS avg_entertain, AVG(spend_grocery_food_store) AS avg_grocery
+FROM Covid19RelatedSpending AS C JOIN USStatefips AS U ON C.statefips = U.st 
+GROUP BY U.stname;
 
--- Question 7: Does low, middle or high income population in US change their spending habit the most in 2020? 
+-- Question 6: Does low, middle or high income population in US change their spending habit the most in 2020? 
 SELECT SUM(spend_all_inchigh) AS change_high_income, SUM(spend_all_incmiddle) AS change_middle_income, SUM(spend_all_inclow) as change_low_income
 FROM Covid19RelatedSpending;
 
+
+SELECT MAX(change_spending) AS max_change_spending
+FROM (
+        SELECT SUM(spend_all_inchigh) AS change_spending
+        FROM Covid19RelatedSpending
+        UNION 
+        SELECT SUM(spend_all_incmiddle) AS change_spending
+        FROM Covid19RelatedSpending
+        UNION 
+        SELECT SUM(spend_all_inclow) AS change_spending
+        FROM Covid19RelatedSpending ) AS T;
         
         
 -- 8. For each different COVID vaccine, how many people have gotten it? 

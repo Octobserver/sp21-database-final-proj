@@ -1,0 +1,8 @@
+stname	 st	 stusps
+Alabama	1	 AL
+Alaska	2	 AK
+Arkansas	5	 AR
+Idaho	16	 ID
+New Mexico	35	 NM
+Rhode Island	44	 RI
+Vermont	50	 VT
