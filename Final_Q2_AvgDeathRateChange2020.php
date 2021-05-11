@@ -15,11 +15,10 @@
 	    }
 	    else {
             echo "<table border=\"2px solid black\">"; 
-            echo "<tr> <td>continent</td> <td>total_cases</td> </tr>"; 
+            echo "<tr> <td>2020_to_2021_Change</td> </tr>"; 
             foreach($result as $row) {
                 echo "<tr>"; 
-                echo "<td>".$row["continent"]."</td>"; 
-                echo "<td>".$row["total_cases"]."</td>"; 
+                echo "<td>".$row["2020_to_2021_Change"]."</td>"; 
                 echo "</tr>"; 
             }
             echo "</table>";
