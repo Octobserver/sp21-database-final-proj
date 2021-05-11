@@ -1,11 +1,11 @@
 
-<head><title>Question 6: List the average change rate in each spending category in US? </title> </head>
+<head><title>Question 5: List the average change rate in each spending category in US? </title> </head>
 <body>
 <?php
     //open a connection to dbase server 
     include 'open.php'; 
 
-    echo "<h2>Question 6: List the average change rate in each spending category in US? </h2><br>";
+    echo "<h2>Question 5: List the average change rate in each spending category in US? </h2><br>";
 
     echo "<br><br>"; 
 	$result = $conn->query("CALL USSpendingChange();");

@@ -1,5 +1,5 @@
 
-<head><title>Question 4: Find tested % of population given country name</title> </head>
+<head><title>Question 3: Find tested % of population given country name</title> </head>
 <body>
 <?php
     //open a connection to dbase server 
@@ -7,7 +7,7 @@
 
     //collect the posted 'Country' 
     $Country = $_POST['Country']; 
-    echo "<h2>Question 4: Find tested % of population given country name </h2><br>";
+    echo "<h2>Question 3: Find tested % of population given country name </h2><br>";
 
     if (!empty($SSN)) { 
         echo "<br><br>"; 

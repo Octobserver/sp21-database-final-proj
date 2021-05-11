@@ -1,11 +1,11 @@
 
-<head><title>Question 3: Which country has hospitals with most equipped handwashing facility? </title> </head>
+<head><title>Question 2: Which country has hospitals with most equipped handwashing facility? </title> </head>
 <body>
 <?php
     //open a connection to dbase server 
     include 'open.php'; 
 
-    echo "<h2>Question 3: Which country has hospitals with most equipped handwashing facility? </h2><br>";
+    echo "<h2>Question 2: Which country has hospitals with most equipped handwashing facility? </h2><br>";
 
     echo "<br><br>"; 
 	$result = $conn->query("CALL MostHandwashingCountry();");

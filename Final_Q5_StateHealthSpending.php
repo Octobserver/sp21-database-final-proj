@@ -1,10 +1,10 @@
-<head><title>Question 5: List decrease in spending on healthcare and social assistance spending for each US State? </title> </head>
+<head><title>Question 4: List decrease in spending on healthcare and social assistance spending for each US State? </title> </head>
 <body>
 <?php
     //open a connection to dbase server 
     include 'open.php'; 
 
-    echo "<h2>Question 5: List decrease in spending on healthcare and social assistance spending for each US State? </h2><br>";
+    echo "<h2>Question 4: List decrease in spending on healthcare and social assistance spending for each US State? </h2><br>";
 
     echo "<br><br>"; 
 	$result = $conn->query("CALL StateHealthSpending();");

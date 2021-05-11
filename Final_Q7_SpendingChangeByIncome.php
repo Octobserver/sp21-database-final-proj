@@ -1,11 +1,11 @@
 
-<head><title>Question 7: Does low, middle or high income population in US change their spending habit the most in 2020?  </title> </head>
+<head><title>Question 6: Does low, middle or high income population in US change their spending habit the most in 2020?  </title> </head>
 <body>
 <?php
     //open a connection to dbase server 
     include 'open.php'; 
 
-    echo "<h2>Question 7: Does low, middle or high income population in US change their spending habit the most in 2020? </h2><br>";
+    echo "<h2>Question 6: Does low, middle or high income population in US change their spending habit the most in 2020? </h2><br>";
 
     echo "<br><br>"; 
 	$result = $conn->query("CALL USSpendingChange();");
