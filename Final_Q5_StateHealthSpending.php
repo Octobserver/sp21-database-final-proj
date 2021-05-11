@@ -16,15 +16,15 @@
             echo "<table border=\"2px solid black\">"; 
             echo "<tr> <td>statefips</td> <td>avg_health</td> </tr>"; 
             foreach($result as $row) {
-                echo "<tr>"; 
+                echo "<tr>";
                 echo "<td>".$row["statefips"]."</td>"; 
                 echo "<td>".$row["avg_health"]."</td>"; 
-                echo "</tr>"; 
+                echo "</tr>";
             }
             echo "</table>";
 	    }
         } else {
-            echo "Call to Final_Q5_StateHealthSpending.sql failed 	<br>"; 
+            echo "Call to Final_Q5_StateHealthSpending.sql failed <br>"; 
         }
 
     $conn->close(); 

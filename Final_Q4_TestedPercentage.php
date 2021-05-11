@@ -9,9 +9,9 @@
     $Country = $_POST['Country']; 
     echo "<h2>Question 3: Find tested % of population given country name </h2><br>";
 
-    if (!empty($SSN)) { 
+    if (!empty($Country)) { 
         echo "<br><br>"; 
-    	$result = $conn->query("CALL TestedPercentage();");
+    	$result = $conn->query("CALL TestedPercentage('".$Country."');");
     	if ($result) {
     	    if (mysqli_num_rows($result) == 0) {
     	       echo "ERROR: result table not found"; 
