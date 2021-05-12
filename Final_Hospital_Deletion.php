@@ -20,10 +20,10 @@
     //}
 
     // sql to delete a record
-    // $sql = "DELETE FROM Hospital WHERE reportID =".$_POST['input_reportID'];
+    $sql = "DELETE FROM Hospital WHERE reportID =".$_POST['input_reportID'];
     // $sql = "DELETE FROM Hospital WHERE reportID = '$input_reportID' ";
     // $sql = "DELETE FROM Hospital WHERE reportID = '$input_reportID' ";
-    $sql = "DELETE FROM Hospital WHERE reportID = '10' ";
+    // $sql = "DELETE FROM Hospital WHERE reportID = '10' ";
 
 
     if ($conn->query($sql) === TRUE) {
