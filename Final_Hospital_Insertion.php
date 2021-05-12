@@ -15,10 +15,9 @@
     
     $qry="SELECT * FROM Country WHERE country_name = '".$input_country."'"; 
 //    $qry="SELECT * FROM Country WHERE country_name = 'Japan'";
+    
     $result = $conn->query($qry);
-    // $num_rows = mysqli_num_rows($result);
-    // if($num_rows > 0){
-    if ($result) {
+    if (mysqli_num_rows($result) > 0) {
         $sql = "INSERT INTO Hospital VALUES(".$_POST['inputs'].")";
 
         if ($conn->query($sql) === TRUE) {

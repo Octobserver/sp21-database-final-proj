@@ -41,6 +41,11 @@ CREATE TABLE Hospital (
   FOREIGN KEY(country_name) REFERENCES Country(country_name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/hospital-small.txt' 
+INTO TABLE Hospital
+IGNORE 1 ROWS;
+
+
 CREATE TABLE HospitalLocatedIn (
   reportID                             VARCHAR(30),
   country_name                         VARCHAR(30),
@@ -48,10 +53,6 @@ CREATE TABLE HospitalLocatedIn (
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
 
-
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/hospital-small.txt' 
-INTO TABLE Hospital
-IGNORE 1 ROWS;
 
 DROP TABLE IF EXISTS Covid19RelatedSpending; 
 CREATE TABLE Covid19RelatedSpending(

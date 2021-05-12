@@ -20,7 +20,9 @@ CREATE TABLE Hospital (
   total_cases_per_million             DECIMAL(10,1), 
   total_tests                         DECIMAL(10,1), 
   handwashing_facilities              DECIMAL(10,1),
-  PRIMARY KEY(reportID)
+  PRIMARY KEY(reportID), 
+  FOREIGN KEY(country_name) REFERENCES Country(country_name) ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/hospital.txt' 
 INTO TABLE Hospital

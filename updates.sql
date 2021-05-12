@@ -3,9 +3,7 @@
 
 
 INSERT INTO Hospital VALUES
-('1000', 'ALB', 'North America', 'US', '2020-12-13', 48530, 788, 1003, 14, 16863.576, 273.82, 206292, 71.684, 0.314, NULL, 2.89), 
-('6999','CHE', 'Europe', 'Switzerland', '2020-10-19', 83159, 8737, 2138, 15, 9608.627, 1009.519, 1278530, 147.728, 0.163, NULL, 4.53); 
-
+('36762', 'Asia', 'Japan', '2020-12-13', 794.219, 2427760, 66.425); 
 
 -- INSERTION To HospitalLocatedIn --- 
 
@@ -22,6 +20,9 @@ INSERT INTO HospitalLocatedIn VALUES
 
 DELETE FROM Hospital 
 WHERE reportID = '1000'; 
+
+DELETE FROM Hospital 
+WHERE reportID = '36762'; 
 
 -- DELETE from HospitalLocatedIn -- 
 DELETE FROM HospitalLocatedIn

@@ -8,12 +8,14 @@ After selecting domand and list of questions, we modify a few questions after re
 
 We also add a new dataset of US State Name and State Fips code from US Census Bureau. This is becuase we realize user don't really know which state name does each state fip code represent, so to improve user's experience, we chagne the query and replace statefips code by state name. 
 
+I also change simply the Hospital dataset by removing uncessary columns 
+
 
 # Process - an (updated, if necessary) version of process.txt from Phase C, explaining your data sources and how you cleaned and prepared the data for insertion into your database
 
 For the Hopital Table: 
 1. Download the Coronavirus (COVID-19) Hospitalizations dataset[https://ourworldindata.org/covid-hospitalizations] 
-2. remove colomns except (iso_code, continent, location, date, total_cases, new_cases, total_deaths, new_deaths, total_cases_per_million, new_cases_per_million, total_tests, total_tests_per_thousand, positive_rate, handwashing_facilities, hospital_beds_per_thousand) 
+2. remove colomns except (Input format: reportID, continent, country_name, date, totoal_cases_per_million, total_tests, handwashing_facilities) 
 
 For the Spending Table: 
 1. Visit the website of Opportunity Insights, Economic Tracker of COVID19[https://www.tracktherecovery.org/]
