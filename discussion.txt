@@ -65,13 +65,16 @@ For the VaccinationByCountry Table:
 2.  Remove the columns iso_code, and people_vaccinated.
 3. Rename the columns as ccountry_name,	date_stamp,	total_vaccinations,	people_fully_vaccinated	daily_vaccinations,	total_vaccinations_per_hundred,	people_fully_vaccinated_per_hundred,	daily_vaccinations_per_million.
 
-# Successes - describe 2-3 technical portions of your project about which you'd like to brag a little (for example, what was a particularly challenging aspect of writing your database that you'd like to highlight so the course sta don't overlook its complexity?)
-1. 
+# Successes - describe 2-3 technical portions of your project about which you'd like to brag a little (for example, what was a particularly challenging aspect of writing your database that you'd like to highlight so the course staff don't overlook its complexity?)
+1. We are able to answer questions like "What is the proportion of people who hold negative attitude toward covid in each country?" by creating VIEW TotalTweetsByCountry and VIEW NegTweetsByCountry, later use an sql query to calculate the portion. 
+2. We are able to create visulization of total covid cases in each continent 
 
 
-# Known Issues - a description of places in the implementation of your project, if any, where you did not fully succeed (are there bugs? are there unimplemented features?)
+# Known Issues - a description of places in the implementation of your project, if any, where you did not fully succeed (are there bugs? are there unimplemented features?) 
+1. If users put sql code inside as input, there hasn't been any prevention method implemented 
 
 
 # Extensions - beyond fixing any known issues mentioned above, what additional functionality do you most wish you had time to add to your project? Describe at least two new features.
+1. implement prevention to malicious code inputs 
 
 
