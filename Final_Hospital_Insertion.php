@@ -9,17 +9,26 @@
 
     echo "<br><br>"; 
 
-    // $sql = "DELETE FROM Hospital WHERE reportID =".$_POST['input_reportID'];
-    // $sql = "DELETE FROM Hospital WHERE reportID = '$input_reportID' ";
     // INSERT INTO Hospital VALUES
+    // we need to be sure that inserted tuple's country_name already exists in Country table!!! 
     // $sql = "INSERT INTO Hospital VALUES ('6999','CHE', 'Europe', 'Switzerland', '2020-10-19', 83159, 8737, 2138, 15, 9608.627, 1009.519, 1278530, 147.728, 0.163, NULL, 4.53)";
-    $sql = "INSERT INTO Hospital VALUES(".$_POST['inputs'].")";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Record inserted successfully";
+    $qry="SELECT * FROM Country WHERE country_name =".$_POST['input_country'];
+    $result = mysqli_query($qry);
+    $num_rows = mysqli_num_rows($result);
+    if($num_rows > 0){
+        $sql = "INSERT INTO Hospital VALUES(".$_POST['inputs'].")";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Record inserted successfully";
+        } else {
+            echo "Error inserting record: " . $conn->error;
+        }
     } else {
-        echo "Error inserting record: " . $conn->error;
+        echo "Foreign Constriants country_name is not valid!!!";
     }
+
+    
     $conn->close(); 
 ?>
 
