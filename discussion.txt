@@ -72,7 +72,7 @@ For the VaccinationByCountry Table:
 
 # Known Issues - a description of places in the implementation of your project, if any, where you did not fully succeed (are there bugs? are there unimplemented features?) 
 1. If users put sql code inside as input, there hasn't been any prevention method implemented 
-2. Did't have time to implement the insert tuples features 
+2. Insert tuples foreign key constraints is rejected all the time
 
 # Extensions - beyond fixing any known issues mentioned above, what additional functionality do you most wish you had time to add to your project? Describe at least two new features.
 1. implement prevention to malicious code inputs 
