@@ -1,10 +1,10 @@
-reportID	iso_code	continent	location	date	total_cases	new_cases	total_deaths	new_deaths	total_cases_per_million	new_cases_per_million	total_tests	total_tests_per_thousand	positive_rate	handwashing_facilities	hospital_beds_per_thousand
-5	AFG	Asia	Afghanistan	2020-02-24	1	1			0.026	0.026				37.746	0.5
-10	ALB	Europe	Albania	2020-07-31	5276	79	157	3	1833.345	27.452	36923	12.83	0.212		2.89
-15	DZA	Africa	Algeria	2021-01-30	107122	235	2888	4	2442.861	5.359				83.741	1.9
-20	GMB	Africa	Gambia	2020-08-05	799	128	16	2	330.621	52.966	7906	3.271	0.262	7.876	1.1
-25	DEU	Europe	Germany	2020-07-21	203717	392	9099	5	2431.456	4.679					8
-35	GIB	Europe	Gibraltar	2021-02-21											
-40	GRC	Europe	Greece	2020-06-01	2918	1	179	4	279.956	0.096	182423	17.502	0.001		4.21
-45	GRL	North America	Greenland	2021-01-29											
-50	GRD	North America	Grenada	2021-03-15	154	6	1	0	1368.658	53.324					3.7
+reportID	continent	country_name	date	total_cases_per_million	total_tests	handwashing_facilities
+1	Asia	Afghanistan	2/24/20	0.026		37.746
+983	Europe	Albania	7/31/20	1833.345	36923	
+1572	Africa	Algeria	1/30/21	2442.861		83.741
+26986	Africa	Gambia	8/5/20	330.621	7906	7.876
+27811	Europe	Germany	7/21/20	2431.456		
+28500	Europe	Gibraltar	2/21/21			
+28641	Europe	Greece	6/1/20	279.956	182423	
+28952	North America	Greenland	1/29/21			
+29342	North America	Grenada	3/15/21	1368.658		

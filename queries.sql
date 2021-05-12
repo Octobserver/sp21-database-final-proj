@@ -114,7 +114,7 @@ SELECT country_name, N.neg_count/T.total_tweets AS proportion_negative
 FROM TotalTweetsByCountry AS T INNER JOIN NegTweetsByCountry AS N USING(country_name);
 
 -- Question 13: How does the number of people who hold negative attitude toward covid change?
-SELECT P.date_stamp, COUNT(*)
+SELECT P.date_stamp, COUNT(*) AS neg_tweet_count
 FROM (SELECT * 
       FROM Covid19RelatedTweets
       WHERE sentiment LIKE "negative") AS P

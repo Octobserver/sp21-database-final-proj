@@ -10,24 +10,21 @@ LOAD DATA LOCAL INFILE '/Users/Weina/Desktop/DB Project/Country.txt'
 INTO TABLE Country
 IGNORE 1 ROWS;
 
+
+DROP TABLE IF EXISTS Hospital;
 CREATE TABLE Hospital (
-  iso_code                            VARCHAR(30),
+  reportID                            VARCHAR(30),
   continent                           VARCHAR(30),
   country_name                        VARCHAR(30),
   date                                DATETIME DEFAULT CURRENT_TIMESTAMP(), 
-  total_cases                         INTEGER, 
-  new_cases                           INTEGER, 
-  total_deaths                        INTEGER,  
-  new_deaths                          INTEGER, 
   total_cases_per_million             DECIMAL(10,1), 
-  new_cases_per_million               DECIMAL(10,1), 
   total_tests                         DECIMAL(10,1), 
-  total_tests_per_thousand            DECIMAL(10,1),
-  positive_rate                       DECIMAL(10,1),
   handwashing_facilities              DECIMAL(10,1),
-  hospital_beds_per_thousand          DECIMAL(10,1),
-  PRIMARY KEY(iso_code)
-);
+  PRIMARY KEY(reportID)
+
+LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/hospital.txt' 
+INTO TABLE Hospital
+IGNORE 1 ROWS;
 
 CREATE TABLE HospitalLocatedIn (
   iso_code                             VARCHAR(30),
@@ -35,11 +32,6 @@ CREATE TABLE HospitalLocatedIn (
   PRIMARY KEY(iso_code),
   FOREIGN KEY(country_name) REFERENCES Country(country_name)
 );
-
-
-LOAD DATA LOCAL INFILE '/Users/sophiaxu/Downloads/db_phasec/hospital.txt' 
-INTO TABLE Hospital
-IGNORE 1 ROWS;
 
 CREATE TABLE Covid19RelatedSpending(
   month                                   INT,

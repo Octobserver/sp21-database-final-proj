@@ -10,3 +10,5 @@ Armenia	Armenia	Asia	2963234
 Australia	Australia	Oceania	25499881
 Austria	Austria	Europe	9006400
 US	United States	North America	331002647
+Chile	Chile	South America	19116209
+Brazil	Brazil	South America	212559409
