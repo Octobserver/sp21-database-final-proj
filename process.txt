@@ -5,7 +5,6 @@ For the Hopital Table:
 1. Download the Coronavirus (COVID-19) Hospitalizations dataset[https://ourworldindata.org/covid-hospitalizations] 
 2. remove colomns except (iso_code, continent, location, date, total_cases, new_cases, total_deaths, new_deaths, total_cases_per_million, new_cases_per_million, total_tests, total_tests_per_thousand, positive_rate, handwashing_facilities, hospital_beds_per_thousand) 
 
-
 For the Spending Table: 
 1. Visit the website of Opportunity Insights, Economic Tracker of COVID19[https://www.tracktherecovery.org/]
 2. Download spending data set from [https://github.com/OpportunityInsights/EconomicTracker], more specifically from [https://github.com/OpportunityInsights/EconomicTracker/tree/main/data]
@@ -18,6 +17,11 @@ For the Country Table:
 1. Download locations.csv from https://github.com/owid/covid-19-data/tree/master/public/data/jhu
 2. Remove the column population_year
 3. Remove empty rows.
+
+For the us-state-ansi-fips table: 
+1. Download us-state-ansi-fips dataset from https://www.census.gov/geographies/reference-files/2017/demo/popest/2017-fips.html
+2. Convert excxel file to txt 
+3. Keep state fip code and state name columns. 
 
 For the Vaccine Table:
 1. Download vaccinations-by-manufacturer.csv from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations
