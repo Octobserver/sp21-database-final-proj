@@ -3,14 +3,6 @@
 <html>
    <body>
 
-	<!-- (0) -->
-	<h2> Show Raw Scores</h2>
-	<form action="Hw4_ShowRawScores.php" method="post">
-		SSN: <input type="text" name="SSN"> <br/>
-		<input type="submit">
-	</form>
-	<br/><br/>
-
 	<!-- (1) -->
 	<h2> Question 1: What is the total cases per million for hospitals in each continent? </h2>
 	<form action="Final_Q1_TotalCaseByContinent.php" method="post">
@@ -49,6 +41,15 @@
 	<form action="Final_Q6_SpendingChangeByIncome.php" method="post">
 		<input type="submit" value = "Run query">
 	</form>
+
+	<!-- Delete -->
+	<h2> Delete Data From Hospital Dataset</h2>
+	<form action="Final_Hospital_Deletion.php" method="post">
+		input_reportID: <input type="number" name="input_reportID"> <br/>
+		<input type="submit">
+	</form>
+	<br/><br/>
+
 
    </body>
 </html>
