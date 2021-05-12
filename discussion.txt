@@ -1,0 +1,77 @@
+# Members - the names and JHEDs of the group members who worked on this project
+- Name: Fanbo Xu (fxu13) 
+- Name: Weina Dai (wdai11)
+
+# Modications - briey summarize any changes you made to your project after selecting a domain and list of questions in Phase A (did you change subject domains due to lack of data? did you replace questions from your original list of 15, or expand the list? did you pull in an additional data source to enrich the project?)
+
+After selecting domand and list of questions, we modify a few questions after realzing some of it cannot be answered with selected dataset. For instance, initially we want to answer how does total sales of tissue, toilet paper and alcohol change over time in US, but later realize that no exisiting dataset have specific information of sales of each goods in US. Therefore we change the question to total average spending change in US. 
+
+We also add a new dataset of US State Name and State Fips code from US Census Bureau. This is becuase we realize user don't really know which state name does each state fip code represent, so to improve user's experience, we chagne the query and replace statefips code by state name. 
+
+
+# Process - an (updated, if necessary) version of process.txt from Phase C, explaining your data sources and how you cleaned and prepared the data for insertion into your database
+
+For the Hopital Table: 
+1. Download the Coronavirus (COVID-19) Hospitalizations dataset[https://ourworldindata.org/covid-hospitalizations] 
+2. remove colomns except (iso_code, continent, location, date, total_cases, new_cases, total_deaths, new_deaths, total_cases_per_million, new_cases_per_million, total_tests, total_tests_per_thousand, positive_rate, handwashing_facilities, hospital_beds_per_thousand) 
+
+For the Spending Table: 
+1. Visit the website of Opportunity Insights, Economic Tracker of COVID19[https://www.tracktherecovery.org/]
+2. Download spending data set from [https://github.com/OpportunityInsights/EconomicTracker], more specifically from [https://github.com/OpportunityInsights/EconomicTracker/tree/main/data]
+3. Breif description of what's inside each dataset file can be seen in [https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md]
+4. Rename colomn names according to description in https://github.com/OpportunityInsights/EconomicTracker/blob/main/docs/oi_tracker_data_dictionary.md
+5. Remove empty data rows 
+6. Keep only colomns (month, day, statefips, spend_accomodation_food, spend_arts_entertainment, spend_all, spend_general_merchandise, spend_grocery_food_store, spend_healthcare_social_assistance, spend_transportation_warehousing, spend_all_inchigh, spend_all_inclow, spend_all_incmiddle)
+
+For the Country Table:
+1. Download locations.csv from https://github.com/owid/covid-19-data/tree/master/public/data/jhu
+2. Remove the column population_year
+3. Remove empty rows.
+
+For the us-state-ansi-fips table: 
+1. Download us-state-ansi-fips dataset from https://www.census.gov/geographies/reference-files/2017/demo/popest/2017-fips.html
+2. Convert excxel file to txt 
+3. Keep state fip code and state name columns. 
+
+For the Vaccine Table:
+1. Download vaccinations-by-manufacturer.csv from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations
+2. extract the column named vaccine into a separate .txt file.
+3. When the data is loaded in MySql, duplicated rows will be removed automatically.
+
+For the  Covid19RelatedTweets Table:
+1. Download tweetid_userid_keyword_topics_sentiments_emotions (5k sample).csv from https://www.openicpsr.org/openicpsr/project/120321/version/V6/view?path=/openicpsr/120321/fcr:versions/V6/Twitter-COVID-dataset---Jan-2021/tweetid_userid_keyword_topics_sentiments_emotions--5k-sample-.csv&type=file 
+2. Remove the columns t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, valence_intensity, and country_region.
+3. Remove empty rows.
+4. Rename the columns as tweetID, userID,	anger_intensity,	fear_intensity,	sadness_intensity,	joy_intensity,	sentiment,	emotion,	keyword,	date_stamp.
+
+For the PublishedIn Table:
+1. Download tweetid_userid_keyword_topics_sentiments_emotions (5k sample).csv from https://www.openicpsr.org/openicpsr/project/120321/version/V6/view?path=/openicpsr/120321/fcr:versions/V6/Twitter-COVID-dataset---Jan-2021/tweetid_userid_keyword_topics_sentiments_emotions--5k-sample-.csv&type=file 
+2. Extract the columns tweetID and country_region.
+3. Rename them as tweetID and country_name.
+4. There are some tweets whose regions cannot be tracked, but since the sample is large, it should be ok.
+
+For the CasesByCountry Table:
+1. Download full_data.csv from https://github.com/owid/covid-19-data/tree/master/public/data/jhu
+2. Remove the columns weekly_cases,weekly_deaths,biweekly_cases, and biweekly_deaths.
+3. Remove empty rows.
+4. Rename the columns as date_stamp,	country_name,	new_cases,	new_deaths,	total_cases,	total_deaths
+
+For the VaccinationByManufacturer Table:
+1. Download vaccinations-by-manufacturer.csv from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.
+2. Rename the columns as country_name, date_stamp, vaccine_type, total_vaccinations.
+
+For the VaccinationByCountry Table:
+1. Download vaccinatios.csv from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.
+2.  Remove the columns iso_code, and people_vaccinated.
+3. Rename the columns as ccountry_name,	date_stamp,	total_vaccinations,	people_fully_vaccinated	daily_vaccinations,	total_vaccinations_per_hundred,	people_fully_vaccinated_per_hundred,	daily_vaccinations_per_million.
+
+# Successes - describe 2-3 technical portions of your project about which you'd like to brag a little (for example, what was a particularly challenging aspect of writing your database that you'd like to highlight so the course sta don't overlook its complexity?)
+1. 
+
+
+# Known Issues - a description of places in the implementation of your project, if any, where you did not fully succeed (are there bugs? are there unimplemented features?)
+
+
+# Extensions - beyond fixing any known issues mentioned above, what additional functionality do you most wish you had time to add to your project? Describe at least two new features.
+
+
