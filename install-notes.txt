@@ -1,1 +1,3 @@
 1. when running setup-small.sql file, remember to replace "LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/Country-small.txt' " to your correct file address 
+2. when running setup.sql file, remember to replace "LOAD DATA LOCAL INFILE '/Users/sophiaxu/Desktop/Database/sp21-database-final-proj/Country-small.txt' " to your correct file address 
+3. Please run all stored sequance sql with "mysql -h dbase.cs.jhu.edu -u StaffUsername -D DBName -p < Final_Q_StoredSequenceName.sql"
