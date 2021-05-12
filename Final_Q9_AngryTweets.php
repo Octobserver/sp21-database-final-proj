@@ -5,7 +5,7 @@
     //open a connection to dbase server 
     include 'open.php'; 
 
-    echo "<h2>QQuestion 9: What is the proportion of tweets that show anger associated with each keyword? </h2><br>";
+    echo "<h2>Question 9: What is the proportion of tweets that show anger associated with each keyword? </h2><br>";
 
     echo "<br><br>"; 
 	$result = $conn->query("CALL AngryTweets();");

@@ -5,14 +5,15 @@ DELIMITER //
 DROP PROCEDURE IF EXISTS AngryTweets // 
 
 CREATE PROCEDURE AngryTweets() 
-BEGIN 
+BEGIN
+    DROP VIEW IF EXISTS TotalTweetsByKeyWord;
     CREATE VIEW TotalTweetsByKeyword AS ( SELECT keyword, COUNT(*) as kw_count
                                       FROM Covid19RelatedTweets
                                       GROUP BY keyword
 	);
 
-
-	CREATE VIEW AngryTweetsByKeyword AS (SELECT A.keyword, COUNT(*) as ang_count
+DROP VIEW IF EXISTS AngryTweetsByKeyword;
+CREATE VIEW AngryTweetsByKeyword AS (SELECT A.keyword, COUNT(*) as ang_count
 	                                     FROM (SELECT * 
 	                                           FROM Covid19RelatedTweets
 	                                           WHERE emotion LIKE "anger") AS A
